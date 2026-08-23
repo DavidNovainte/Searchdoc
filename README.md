@@ -4,15 +4,11 @@
 
 > 不是 Everything（那是文件名秒搜）。SearchDoc 建的是**正文索引**：回答「这句话写在哪」。
 
-[English](#english) · [中文](#中文)
+🌐 **简体中文** | [English](README_EN.md)
 
 [![CI](https://github.com/DavidNovainte/Searchdoc/actions/workflows/ci.yml/badge.svg)](https://github.com/DavidNovainte/Searchdoc/actions/workflows/ci.yml)
 
----
-
-## 中文
-
-### 它能做什么
+## 它能做什么
 
 - **统一搜索三个来源**：本地文件（md/txt/pdf/docx 等）、Google Docs（OAuth）、Notion 数据库
 - **真·正文检索**：SQLite FTS5 全文索引；模糊/精准模式、标题/正文范围、相关度/最新排序、`OR` / `-排除` 语法
@@ -22,7 +18,7 @@
 - **数据自主**：索引与凭据全部在本机应用数据目录；无遥测。联网仅发生在你主动同步 Google/Notion 或点击「检查更新」时
 - **运维齐备**：索引备份/恢复（带回滚保护）、FTS 碎片整理、发布版更新检查（GitHub Releases）
 
-### 5 分钟上手（Windows）
+## 5 分钟上手（Windows）
 
 **依赖**：Node.js 20+ · [Rust stable](https://rustup.rs) · WebView2（Win10/11 通常自带）
 
@@ -46,12 +42,12 @@ npm run desktop   # 首次编译约 1~5 分钟
 
 </details>
 
-### 云源接入（可选）
+## 云源接入（可选）
 
 - **Google Docs**：按 [docs/GOOGLE_SETUP.md](docs/GOOGLE_SETUP.md) 创建桌面 OAuth 客户端 → 设置 → Google 账号连接 → 来源页加链接或配置文件夹筛选
 - **Notion**：在 [notion.so/my-integrations](https://www.notion.so/my-integrations) 创建 Integration 并在目标数据库「连接」它 → 设置 → 同步 → 粘贴 Token 与数据库 ID
 
-### 日常操作
+## 日常操作
 
 | 操作 | 方式 |
 |------|------|
@@ -60,7 +56,7 @@ npm run desktop   # 首次编译约 1~5 分钟
 | 加库 | 来源页：文件夹 / 磁盘 / Docs / Notion |
 | 同步 | 侧栏「同步全部」（进行中可取消） |
 
-### 架构
+## 架构
 
 ```text
 src/                      React UI（组件按职责拆分，hooks 承载逻辑）
@@ -81,7 +77,7 @@ src-tauri/src/
 
 所有来源经同一 `SourceConnector::scan() -> Vec<DocumentRecord>` 写入共享索引——新增来源只需实现一个 connector。
 
-### 开发
+## 开发
 
 ```bash
 npm test                                        # 前端单测
@@ -90,28 +86,10 @@ cargo test --lib --manifest-path src-tauri/Cargo.toml   # Rust 单测
 
 CI 强制：fmt · clippy(`-D warnings`) · 双端测试 · RustSec 依赖审计（见 [.github/workflows/ci.yml](.github/workflows/ci.yml)）。发布流程见 [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md)。
 
-### 隐私声明
+## 隐私声明
 
 SearchDoc 不含任何遥测/埋点。网络请求仅有三类且全部由你触发：① 同步 Google Docs；② 同步 Notion；③ 手动点击「检查更新」。索引数据库与所有凭据只存本机应用数据目录。
 
-### License
+## License
 
 [MIT](LICENSE)
-
----
-
-## English
-
-**Local-first cross-source full-text search** — one box to search local documents, Google Docs and Notion, with snippets, preview and one-click open.
-
-Highlights:
-
-- Real **content** search over SQLite FTS5 (fuzzy/exact modes, title/body scope, relevance/mtime sort, boolean syntax), tuned for mixed CJK/Latin queries
-- Three pluggable sources behind a single `SourceConnector` trait: local folders (parallel parsing via rayon, mtime fast-path), Google Drive export with 429 backoff, Notion databases with block flattening
-- Tray-resident desktop app: configurable global hotkey, autostart, background sync notifications (only while hidden), file-watcher incremental sync + fallback polling
-- Privacy by design: no telemetry; network is used only when you sync a cloud source or click "check for updates"; index and credentials never leave your machine
-- Ops built in: index backup/restore with rollback guard, FTS optimization, GitHub Releases update check
-
-**Build (Windows):** Node 20+, Rust stable, WebView2 → `npm install && npm run desktop`. Tests: `npm test`, `cargo test --lib --manifest-path src-tauri/Cargo.toml`.
-
-Licensed under [MIT](LICENSE). Chinese documentation above is the canonical, more detailed one.
