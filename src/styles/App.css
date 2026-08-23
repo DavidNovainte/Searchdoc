@@ -1,0 +1,83 @@
+/* ── App shell ── */
+.app-shell {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  background: var(--bg-app);
+  overflow: hidden;
+  transition: grid-template-columns var(--fast);
+}
+
+.app-shell.sidebar-collapsed {
+  grid-template-columns: 64px 1fr;
+}
+
+.app-shell.settings-mode {
+  grid-template-columns: 1fr;
+}
+
+.app-shell.settings-mode .main {
+  min-width: 0;
+}
+
+.app-shell.settings-mode .content {
+  padding: 12px 18px 18px;
+}
+
+.app-shell.settings-mode .settings-shell {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Main column ── */
+.main {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-app);
+}
+
+.content {
+  min-height: 0;
+  flex: 1;
+  padding: 16px 18px;
+  overflow: hidden;
+}
+
+.content.content-flush {
+  padding: 12px 14px;
+}
+
+.content > .view {
+  height: 100%;
+  min-height: 0;
+}
+
+/* Search: more canvas, less chrome */
+.main:has(.search-layout) .content {
+  padding-top: 12px;
+}
+
+/* Boot screen */
+.boot-panel {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 10px;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.boot-panel h3 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 15px;
+}
+
+.boot-panel p {
+  margin: 0;
+  font-size: 12.5px;
+}

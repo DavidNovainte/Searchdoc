@@ -1,0 +1,20 @@
+/* ── DocsImport ── */
+.link-input {
+  width: 100%;
+  min-height: 88px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 10px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  font: inherit;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.45;
+  outline: none;
+}
+
+.link-input:focus {
+  border-color: rgba(249, 115, 22, 0.45);
+}

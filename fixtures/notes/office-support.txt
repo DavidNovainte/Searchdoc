@@ -1,0 +1,1 @@
+SearchDoc 现已支持 PDF 与 DOCX 正文抽取。请把 pdf/docx 放进本地源文件夹后点同步。

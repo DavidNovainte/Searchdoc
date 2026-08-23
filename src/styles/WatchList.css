@@ -1,0 +1,48 @@
+/* ── WatchList ── */
+.watch-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+  max-height: 220px;
+  overflow: auto;
+}
+
+.watch-list.compact {
+  max-height: 160px;
+  margin-top: 8px;
+}
+
+.watch-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-card);
+}
+
+.watch-main {
+  min-width: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.watch-main strong {
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+.watch-main a {
+  color: var(--text-muted);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.watch-main a:hover {
+  color: var(--orange);
+}

@@ -1,0 +1,13 @@
+/* ── highlight.tsx (marker in rendered text) ── */
+.hit-mark {
+  border-radius: 3px;
+  padding: 0 2px;
+  background: rgba(249, 115, 22, 0.28);
+  color: #fff;
+}
+
+.hit-mark-active {
+  outline: 1px solid rgba(249, 115, 22, 0.95);
+  background: rgba(249, 115, 22, 0.55) !important;
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.25);
+}

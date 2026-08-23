@@ -1,0 +1,129 @@
+/* ── AppHeader ── */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-sidebar);
+  min-height: 64px;
+  box-sizing: border-box;
+}
+
+.main-header-lead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.main-header-text {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.main-header p {
+  margin: 3px 0 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 62%;
+}
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 7px 12px 7px 8px;
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  transition: background var(--fast), color var(--fast), border-color var(--fast);
+}
+
+.back-btn:hover {
+  color: var(--text-main);
+  border-color: rgba(249, 115, 22, 0.35);
+  background: var(--orange-glow);
+}
+
+.back-btn .ui-icon {
+  color: var(--orange);
+}
+
+.header-toast {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: min(360px, 46vw);
+  min-height: 30px;
+  padding: 4px 8px 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 197, 94, 0.28);
+  background: rgba(34, 197, 94, 0.12);
+  color: #bbf7d0;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.header-toast.success {
+  border-color: rgba(34, 197, 94, 0.28);
+  background: rgba(34, 197, 94, 0.12);
+  color: #bbf7d0;
+}
+
+.header-toast-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.header-toast-close {
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0;
+  opacity: 0.8;
+}
+
+.header-toast-close:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-toast-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 18px 0;
+}

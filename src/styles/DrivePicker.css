@@ -1,0 +1,54 @@
+/* ── DrivePicker ── */
+.drive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.drive-card {
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-app);
+  color: var(--text-secondary);
+  padding: 12px 14px;
+  cursor: pointer;
+  font: inherit;
+  transition: border-color var(--fast), background var(--fast);
+}
+
+.drive-card-ico {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--orange);
+  background: var(--orange-glow);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+.drive-card strong {
+  color: var(--text-main);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.drive-card span {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.drive-card:hover:not(:disabled) {
+  border-color: rgba(249, 115, 22, 0.35);
+  background: var(--orange-glow);
+}
+
+.drive-card:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

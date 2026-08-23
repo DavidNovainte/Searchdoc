@@ -1,0 +1,98 @@
+/* ── SyncSection ── */
+.seg-control {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  padding: 3px;
+  border-radius: var(--r-md);
+  background: var(--bg-app);
+  border: 1px solid var(--border);
+}
+
+.seg-control .seg {
+  border: 0;
+  border-radius: var(--r-sm);
+  padding: 8px 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.seg-control .seg:hover:not(:disabled) {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.seg-control .seg.active {
+  background: var(--bg-elevated);
+  color: var(--text-main);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.seg-control .seg:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.folder-filter-block {
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+}
+
+.folder-filter-block.nested {
+  margin-top: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: grid;
+  gap: 10px;
+}
+
+.folder-filter-input {
+  width: 100%;
+  min-height: 72px;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 10px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  font: inherit;
+  font-size: 12.5px;
+  line-height: 1.45;
+  outline: none;
+}
+
+.folder-filter-input:focus {
+  border-color: rgba(249, 115, 22, 0.45);
+}
+
+.folder-id-list {
+  list-style: none;
+  margin: 0 0 10px;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.folder-id-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--bg-elevated, var(--bg-card));
+}
+
+.folder-id-list code {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+}

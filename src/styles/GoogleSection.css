@@ -1,0 +1,36 @@
+/* ── GoogleSection ── */
+.google-card {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-inset);
+}
+
+.section-desc {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.conn-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.conn-pill.on {
+  background: rgba(34, 197, 94, 0.12);
+  color: var(--green);
+}
+
+.conn-pill.off {
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}

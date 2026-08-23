@@ -1,0 +1,182 @@
+/* Settings master–detail (TranscribePro-style) */
+.settings-shell {
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.settings-detail {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-detail-body {
+  display: grid;
+  gap: 14px;
+  padding: 22px 28px 32px;
+  align-content: start;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+}
+
+/* Slightly roomier form fields on wide settings detail */
+.settings-detail-body .form-grid input,
+.settings-detail-body .folder-filter-input {
+  padding: 10px 12px;
+}
+
+.settings-detail-body .settings-card {
+  width: 100%;
+}
+
+.settings-detail-body .form-grid,
+.settings-detail-body .folder-filter-input,
+.settings-detail-body .path-list {
+  width: 100%;
+}
+
+.settings-detail-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 4px;
+}
+
+.settings-detail-head h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 650;
+  color: var(--text-main);
+}
+
+.settings-detail-head p {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.settings-card.dimmed {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.settings-section {
+  display: grid;
+  gap: 10px;
+}
+
+.settings-section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 2px;
+}
+
+.settings-section-head h2 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.settings-card {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--bg-inset);
+}
+
+.settings-card.tight {
+  margin-top: 0;
+  padding: 12px 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 0;
+}
+
+.settings-row-text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.settings-row-text strong {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--text-main);
+}
+
+.settings-row-text span {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.settings-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.settings-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0 -2px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.form-grid label {
+  display: grid;
+  gap: 6px;
+}
+
+.form-grid span {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.form-grid input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  padding: 8px 10px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  outline: none;
+}
+
+.form-grid input:focus {
+  border-color: rgba(249, 115, 22, 0.45);
+}
+
+.form-grid.compact {
+  gap: 8px;
+}

@@ -1,0 +1,5 @@
+Roadmap
+1. SQLite FTS5
+2. Local folder connector
+3. Google Docs OAuth
+4. PDF/DOCX parsers

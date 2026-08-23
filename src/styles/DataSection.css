@@ -1,0 +1,31 @@
+/* ── DataSection ── */
+.path-list {
+  display: grid;
+  gap: 10px;
+}
+
+.path-row {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.path-row span {
+  color: var(--text-muted);
+  font-size: 11px;
+  padding-top: 2px;
+}
+
+.path-row code {
+  display: block;
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: var(--r-sm);
+  background: var(--bg-app);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  word-break: break-all;
+  white-space: normal;
+  line-height: 1.35;
+}
